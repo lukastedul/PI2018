@@ -6,13 +6,9 @@ using System.Threading.Tasks;
 
 namespace UML_labos
 {
-    class Item
+    class BillItem : Item
     {
-        public string Name { get; set; }
-        public float Price { get; set; }
-        public int Quantity { get; set; }
-
-        public Item(string name, float price, int quantity)
+        public BillItem(string name, float price, int quantity) : base(name, price, quantity)
         {
             Name = name;
             Price = price;
@@ -24,5 +20,9 @@ namespace UML_labos
             return Name + "; " + Price.ToString() + "kn " + Quantity.ToString() + "kom";
         }
 
+        public string Ispis()
+        {
+            return "";
+        }
     }
 }
